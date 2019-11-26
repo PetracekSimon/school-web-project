@@ -1,0 +1,603 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #fefefe;
+}
+.green {
+  color: #63ba1b;
+}
+
+body #menubg {
+  -webkit-clip-path: polygon(0 0, 0 78%, 33% 20%);
+  clip-path: polygon(0 0, 0 78%, 33% 20%);
+  background: #63ba1b;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 864px) {
+  body #menubg {
+    display: none;
+  }
+}
+
+body #bg {
+  -webkit-clip-path: polygon(100% 0, 100% 78%, 43% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 78%, 43% 100%, 0 100%, 0 0);
+  background: #63ba1b;
+  width: 100%;
+  min-height: 92vh;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 864px) {
+  body #bg {
+    -webkit-clip-path: polygon(0 0, 75% 0, 52% 100%, 0% 100%);
+    clip-path: polygon(0 0, 75% 0, 52% 100%, 0% 100%);
+  }
+}
+
+@media (max-height: 568px) {
+  body #bg {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    height: 90vh;
+  }
+}
+
+body header a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+main {
+  min-height: 90vh;
+}
+
+@media (min-width: 864px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% auto;
+    grid-template-columns: 55% auto;
+    grid-template-areas: "primary card";
+  }
+}
+
+main section#card {
+  background: #fff;
+  padding: 20px;
+  margin: 3em auto 0 auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 75%;
+}
+
+@media (min-width: 864px) {
+  main section#card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin: 1em;
+    max-width: 360px;
+    padding: 45px 15px;
+  }
+}
+
+main section#card ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+}
+
+main section#card ul li {
+  margin-bottom: 10px;
+}
+
+main section#card ul li span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../imgs/correct-symbol.png");
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  margin-right: 10px;
+}
+
+main section#card ul li strong {
+  display: inline-block;
+  margin-left: 40px;
+  color: #707070;
+}
+
+@media (min-width: 840px) {
+  main section#card ul li strong {
+    margin-left: 30%;
+  }
+}
+
+main section#primary {
+  color: #fff;
+  padding: 15px;
+  padding-top: 0;
+  text-align: center;
+}
+
+@media (min-width: 864px) {
+  main section#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+  }
+}
+
+main section#primary h1 {
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-top: 10px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+@media (min-width: 864px) {
+  main section#primary h1 {
+    width: 60%;
+    font-size: 4em;
+    line-height: 1.1em;
+  }
+}
+
+main section#primary p {
+  font-size: 1.1em;
+  margin-top: 0;
+}
+
+@media (min-width: 864px) {
+  main section#primary p {
+    margin-top: 25px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+main section#primary a {
+  color: #63ba1b;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  display: block;
+  width: 80%;
+  margin: 15px auto 0 auto;
+  padding: 15px;
+}
+
+main section#primary a:hover {
+  background: #e6e6e6;
+}
+
+@media (max-height: 708px) {
+  main section#primary a {
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 864px) {
+  main section#primary a {
+    display: inline-block;
+    margin-top: 50px;
+    max-width: 240px;
+  }
+}
+
+@media (min-width: 355px) {
+  main section#primary a {
+    width: 60%;
+  }
+}
+
+#aboutbg {
+  background-image: url("../imgs/SVG/shape.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  margin-top: 500px;
+  z-index: -2;
+}
+
+@media (max-height: 650px) {
+  #aboutbg {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 775px) {
+  #about {
+    height: 101vw;
+  }
+}
+
+@media (min-width: 920px) {
+  #about {
+    height: 687px;
+  }
+}
+
+#about h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #b9bfbb;
+}
+
+@media (min-width: 654px) {
+  #about h1 {
+    text-align: right;
+    margin-right: 10%;
+    color: #b9bfbb;
+    font-size: 4em;
+  }
+}
+
+#about #about_img {
+  text-align: center;
+}
+
+#about #about_img img {
+  width: 90vw;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+}
+
+@media (min-width: 538px) {
+  #about #about_img img {
+    width: 60vw;
+    left: 30%;
+  }
+}
+
+@media (min-width: 920px) {
+  #about #about_img img {
+    right: 0;
+    margin-right: 0;
+    width: 400px;
+  }
+}
+
+@media (min-width: 1317px) {
+  #about #about_img img {
+    margin-right: 20vw;
+  }
+}
+
+#about #about_content {
+  padding: 30px;
+  background: #fff;
+  margin: 350px auto 25px auto;
+  width: 90%;
+  -webkit-box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 538px) {
+  #about #about_content {
+    width: 60%;
+    margin: 350px 0 0 30px;
+  }
+}
+
+@media (min-width: 836px) {
+  #about #about_content {
+    width: 500px;
+  }
+}
+
+@media (min-width: 920px) {
+  #about #about_content {
+    margin: 150px 0 0 20vw;
+  }
+}
+
+@media (min-width: 1201px) {
+  #about #about_content {
+    width: 600px;
+  }
+}
+
+#about #about_content #circle {
+  position: absolute;
+  top: 75vh;
+  left: 10%;
+  z-index: -3;
+  width: 300px;
+  display: none;
+  -webkit-transform: translate3d(0px, 320px, 0px);
+  transform: translate3d(0px, 320px, 0px);
+}
+
+@media (min-width: 920px) {
+  #about #about_content #circle {
+    display: block;
+  }
+}
+
+#about #about_content h1 {
+  color: #707070;
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 3em;
+  margin-top: 5px;
+}
+
+#about #about_content h3 {
+  font-weight: 300;
+  margin: 0;
+  color: #a3a3a3;
+}
+
+.container_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: url("../imgs/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container_banner div {
+  margin: 100px 30px;
+  color: white;
+}
+
+.container_banner div h1 {
+  margin-bottom: 0;
+  font-size: 3em;
+}
+
+.container_banner div p {
+  color: #63ba1b;
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+@media (min-width: 830px) {
+  .container_banner div p {
+    text-align: right;
+  }
+}
+
+.single-curve {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 51px;
+  left: 0px;
+  margin-top: -40px;
+  background: white;
+  border-radius: 50%;
+  top: 15px;
+}
+
+@media (min-width: 550px) {
+  .single-curve {
+    display: none;
+  }
+}
+
+.margin-top {
+  height: 100px;
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 550px) {
+  .margin-top {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .margin-top {
+    height: 50px;
+  }
+}
+
+.card {
+  max-width: 310px;
+  margin: 0 auto 0 auto;
+}
+
+.card .card-img_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card .card-img_cont img {
+  width: 148px;
+  height: 151px;
+}
+
+.card .card-text h3 {
+  text-align: center;
+  color: #63ba1b;
+  font-size: 2em;
+}
+.card .card-button {
+  float: right;
+  background: #63ba1b;
+  display: inline;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.gallery .gallery-cell img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .gallery .gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  .gallery .gallery-cell {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+
+}
+
+/* .gallery {
+}
+.gallery .gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.gallery .gallery-cell {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+.gallery .gallery-cell img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+} */
+/* external css: flickity.css */
+/* external css: flickity.css */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+.services {
+  max-height: 400px;
+  height: 100%;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .services {
+    max-height: 100vh;
+  }
+}
+
+.services #services-header {
+  text-transform: uppercase;
+  display: none;
+}
+@media (min-width: 768px) {
+  .services #services-header {
+    display: inline;
+    text-align: right;
+    margin-left: 10%;
+    color: #b9bfbb;
+    font-size: 4em;
+  }
+}
+.main-carousel {
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .main-carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.main-carousel::after {
+  content: "flickity";
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-carousel::after {
+    content: "";
+  }
+}
+
+.main-carousel .carousel-cell {
+  width: 95%;
+  margin: 0 10px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+@media (min-width: 768px) {
+  .main-carousel .carousel-cell {
+    width: 33%;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1161px) {
+  .main-carousel .carousel-cell {
+    width: 25%;
+  }
+}
+
+/* no margin bottom when Flickity enabled */
+.flickity-enabled .carousel-cell {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */
